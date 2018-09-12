@@ -63,7 +63,12 @@ module.exports = merge(common, {
               localIdentName: '[name]__[local]___[hash:base64:5]',
             },
           },
-          // Add additional loaders here. (e.g. sass-loader)
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
     ],
