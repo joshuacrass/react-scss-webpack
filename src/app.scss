@@ -6,8 +6,9 @@ $color-blue: #0059ff;
   color: $color-blue;
   font-size: 2rem;
   text-align: center;
+
   .sassyDiv {
-    font-size: 3rem;
     color: $color-sassy;
+    font-size: 3rem;
   }
 }

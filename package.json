@@ -8,6 +8,7 @@
     "clean": "rm -rf build/*",
     "check-staged": "lint-staged",
     "lint": "eslint src -c .eslintrc.json --ext js,jsx",
+    "sass-lint": "sass-lint -vq src/**/*.scss",
     "start:dev": "node config/webpack-dev-server.js",
     "start:prod": "yarn build; serve build"
   },
@@ -32,6 +33,7 @@
     "node-sass": "^4.9.3",
     "path": "^0.12.7",
     "prettier": "^1.14.2",
+    "sass-lint": "^1.12.1",
     "sass-loader": "^7.1.0",
     "serve": "^10.0.0",
     "style-loader": "^0.23.0",
@@ -59,6 +61,9 @@
     ],
     "*.{js,jsx,json,md}": [
       "prettier --list-different"
+    ],
+    "src/**/*.scss": [
+      "sass-lint -vq"
     ]
   }
 }
